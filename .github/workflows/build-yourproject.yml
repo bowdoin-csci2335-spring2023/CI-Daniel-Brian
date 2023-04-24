@@ -7,28 +7,9 @@ on:
       - main
       - development
 
-# runnin some jobs
-# want to build my project on linux, and make sure all tests pass and I can build a .deb file for dpkg
 jobs:
-  build:
+  demo-GH-Actions:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - name: Install dependencies
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y build-essential fakeroot devscripts
-      - name: Build project
-        run: |
-          make
-      - name: Run tests
-        run: |
-          make test
-      - name: Build .deb file
-        run: |
-          make deb
-      - name: Upload .deb file
-        uses: actions/upload-artifact@v2
-        with:
-          name: myproject-deb
-          path: myproject.deb
+      - name: run a one-line script
+        uses: actions/checkout@v3
