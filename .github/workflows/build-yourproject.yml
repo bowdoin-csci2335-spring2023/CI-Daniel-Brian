@@ -27,3 +27,8 @@ jobs:
       - name: List files in the repository
         run: |
           ls -la ${{ github.workspace }}
+
+      - run: echo "🍏 This job's status is ${{ job.status }}."
+      - run: pip install openai
+
+      # now, connect to openAI's API to have it evaluate the english fluency of the readme.
