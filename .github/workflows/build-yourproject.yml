@@ -33,7 +33,7 @@ jobs:
       - run: |
           curl https://api.openai.com/v1/chat/completions 
           -H "Content-Type: application/json" 
-          -H "Authorization: Bearer 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" 
+          -H "Authorization: Bearer $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" 
           -d '{
             "model": "gpt-3.5-turbo",
             "messages": [{"role": "user", "content": "Say this is a test!"}],
