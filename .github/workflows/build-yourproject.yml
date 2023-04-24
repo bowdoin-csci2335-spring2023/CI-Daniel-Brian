@@ -1,2 +1,8 @@
 name: Demo to writing Github Actions Stuff
 
+# on push to main and development, run the build action
+on:
+  push:
+    branches:
+      - main
+      - development
